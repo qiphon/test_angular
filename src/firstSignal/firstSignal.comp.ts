@@ -8,6 +8,7 @@ import { Component, computed, signal } from '@angular/core'
 export class FirstSignal {
   count = signal(1)
   computedValue = computed(() => this.count() * 4)
+  arr = [1, 2, 3, 4]
 
   updateCount() {
     this.count.update(val => ++val)

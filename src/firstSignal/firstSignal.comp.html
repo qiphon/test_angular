@@ -7,3 +7,19 @@
 </h3>
 <button [attr.role]="'ssss'" (click)="this.updateCount()" [disabled]="this.count() > 5">disabled when value > 5</button>
 <section>computed value is {{this.computedValue()}}</section>
+
+<section>
+  use if
+  <div>
+    if value > 3 show span
+    @if (this.count() > 3) {
+    <span>when value > 3 ,you can see me</span>
+    } @else {
+    <span> value < 3 </span>
+        }
+  </div>
+
+  @for (item of this.arr; track $index) {
+  <div>{{item}} -- {{$index}}</div>
+  }
+</section>
