@@ -12,16 +12,37 @@ export class FirstSignal {
   arr = [1, 2, 3, 4]
 
   constructor() {
-    effect(() => {
+    const destroyCountEffect = effect(() => {
       console.log('count change')
       console.log(this.count())
+
+      if (this.count() > 5) {
+        this.logCountEffect.destroy()
+      }
     })
 
-    effect(() => {
+    effect(oncleanup => {
       console.log('count string change')
       console.log(this.countString())
+
+      oncleanup(() => {
+        console.log('count string cleanup')
+        destroyCountEffect.destroy()
+      })
     })
   }
+
+  private logCountEffect = effect(() => {
+    console.log('private log effect , not in constructor')
+    console.log(this.computedValue())
+  })
+  // need pass injector in constuctor
+  // private logCountStringEffect() {
+  //   return effect(() => {
+  //     console.log('log string effect')
+  //     console.log(this.countString())
+  //   }, {injector: this.injector})
+  // }
 
   updateCountStr() {
     this.countString.set(this.countString() + this.count())
