@@ -1,0 +1,14 @@
+<h1>
+  first_temp
+</h1>
+
+<h3>
+  red color
+  @for (item of counter(); track $index) {
+  <div>{{item}} __ {{$index}} __link value {{linkCounter()}} __ computed counter is {{this.computedCounter()}}</div>
+  }
+
+  <div>link counter 2, use linked signal object method {{this.linkCounter2()}}</div>
+  <div>link counter 3, use linked signal object method {{this.linkCounter3()}}</div>
+</h3>
+<button (click)="changeCounterArr()">add </button>
