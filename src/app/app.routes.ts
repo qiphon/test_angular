@@ -4,6 +4,7 @@ import { FirstTemplate } from '../firstTemplate/firstTemplate.comp'
 import { UseSubComp } from '../useSubComp/useSubComp.comp'
 import { FirstSignal } from '../firstSignal/firstSignal.comp'
 import { LinkSignalComp } from '../linkSignal/index.comp'
+import { SyncWithResources } from '../asyncWithResources/index.comp'
 
 export const routes: Routes = [
   {
@@ -30,5 +31,10 @@ export const routes: Routes = [
     title: 'link-signal',
     path: 'link-signal',
     component: LinkSignalComp,
+  },
+  {
+    title: 'sync_resources',
+    path: 'sync_resources',
+    component: SyncWithResources,
   },
 ]
