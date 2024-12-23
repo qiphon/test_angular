@@ -1,0 +1,14 @@
+<h1>
+  first_temp
+</h1>
+
+<h3>
+  red color
+  @for (item of counter(); track $index) {
+  <div>{{item}} __ {{$index}} __ is loading {{syncDataObj.isLoading()}} </div>
+  }
+
+  <div>{{syncDataObj.value()}}</div>
+
+</h3>
+<button (click)="changeCounterArr()">add </button>
