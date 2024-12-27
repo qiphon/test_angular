@@ -5,6 +5,7 @@ import { UseSubComp } from '../useSubComp/useSubComp.comp'
 import { FirstSignal } from '../firstSignal/firstSignal.comp'
 import { LinkSignalComp } from '../linkSignal/index.comp'
 import { SyncWithResources } from '../asyncWithResources/index.comp'
+import { UseProps } from '../useProps/index.comp'
 
 export const routes: Routes = [
   {
@@ -36,5 +37,10 @@ export const routes: Routes = [
     title: 'sync_resources',
     path: 'sync_resources',
     component: SyncWithResources,
+  },
+  {
+    title: 'use-props',
+    path: 'use-props',
+    component: UseProps,
   },
 ]

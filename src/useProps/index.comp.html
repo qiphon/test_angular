@@ -1,0 +1,28 @@
+<h1>
+  prop test
+</h1>
+
+<h3>
+  red color
+</h3>
+<hr>
+<div>
+  <div>值会被传到子组件
+    <button (click)="changeProp()">change props value</button>
+    <button (click)="changeModelVal()">change model value</button>
+    <!-- <input type="text" [(value)]="input2" /> -->
+  </div>
+  <div>
+    model bind value : {{input2()}} <br>
+    input4 bind value : {{input4()}} (computed 不能监控这个静态属性值，但是可以在 html 中直接使用这个值（直接使用的值变化后会重新渲染）。 )<br>
+    input 3 value is {{input3}}
+  </div>
+  <first-comp />
+  <aaa />
+</div>
+<descA title2="" titAlias="alias test , real prop name is title4" />
+<hr>
+<descA title2="must fill props" title="{{' model value is ' + input2()}}" [(value)]="input2"
+  [title3]="'title3 use @Input decorator ' + input2()" />
+<hr>
+<descA title="add props" title2="{{inputVal()}} " [(value)]="input3" testGet="{{input3}}" />
