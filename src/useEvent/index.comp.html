@@ -1,0 +1,16 @@
+<h1>
+  prop use events
+</h1>
+
+<h3>
+  red color
+</h3>
+<hr>
+<div>
+  <button (click)="toggleModal($event)">parent modal button</button>
+  <dialog [open]="showModal()">
+    <div>dialog content
+      <descA title2="{{inputVal()}}" (closeFn)="closeProps($event)" />
+    </div>
+  </dialog>
+</div>
