@@ -7,6 +7,7 @@ import { LinkSignalComp } from '../linkSignal/index.comp'
 import { SyncWithResources } from '../asyncWithResources/index.comp'
 import { UseProps } from '../useProps/index.comp'
 import { UseEvents } from '../useEvent/index.comp'
+import { NGSlot } from '../ngSlot/index.comp'
 
 export const routes: Routes = [
   {
@@ -48,5 +49,10 @@ export const routes: Routes = [
     title: 'use-events',
     path: 'use-events',
     component: UseEvents,
+  },
+  {
+    title: 'use-slot',
+    path: 'use-slot',
+    component: NGSlot,
   },
 ]
