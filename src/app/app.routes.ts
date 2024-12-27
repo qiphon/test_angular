@@ -8,6 +8,7 @@ import { SyncWithResources } from '../asyncWithResources/index.comp'
 import { UseProps } from '../useProps/index.comp'
 import { UseEvents } from '../useEvent/index.comp'
 import { NGSlot } from '../ngSlot/index.comp'
+import { HostElement } from '../hostElement/index.comp'
 
 export const routes: Routes = [
   {
@@ -54,5 +55,10 @@ export const routes: Routes = [
     title: 'use-slot',
     path: 'use-slot',
     component: NGSlot,
+  },
+  {
+    title: 'el-host',
+    path: 'el-host',
+    component: HostElement,
   },
 ]
