@@ -9,6 +9,7 @@ import { UseProps } from '../useProps/index.comp'
 import { UseEvents } from '../useEvent/index.comp'
 import { NGSlot } from '../ngSlot/index.comp'
 import { HostElement } from '../hostElement/index.comp'
+import { LifeCycle } from '../lifeCycle/index.comp'
 
 export const routes: Routes = [
   {
@@ -57,8 +58,8 @@ export const routes: Routes = [
     component: NGSlot,
   },
   {
-    title: 'el-host',
-    path: 'el-host',
-    component: HostElement,
+    title: 'life-cycle',
+    path: 'life-cycle',
+    component: LifeCycle,
   },
 ]
